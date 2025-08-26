@@ -1,0 +1,138 @@
+html {
+  font-size: 10px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding-top: 2rem;
+  font-family: "Roboto", sans-serif;
+  background-color: #f8f8f8;
+  position: relative;
+  height: 100vh;
+}
+
+body .container {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.container a {
+  text-decoration: none;
+  color: green;
+  cursor: pointer;
+}
+.container li,
+.container ul {
+  list-style: none;
+  margin: 0;
+}
+
+.img-container {
+  margin: 5rem auto 2rem auto;
+  text-align: center;
+}
+.title img {
+  height: 5rem;
+}
+.title {
+  display: block;
+  margin: 0px auto;
+  position: relative;
+}
+
+body .hidden {
+  display: none;
+}
+.login,
+.createAccount {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 90%;
+}
+.input-form input {
+  background: #dddddda2;
+  border: none;
+  border-radius: 0.9rem;
+  width: 100%;
+  outline: none;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.login form a {
+  float: right;
+}
+.input-form {
+  position: relative;
+}
+.input-form label {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 25px;
+  left: 5px;
+  pointer-events: none;
+  padding: 0 5px;
+  color: #666;
+  transition: 0.3s;
+  font-size: 1.6rem;
+}
+.input-form input::placeholder {
+  font-size: 1.6rem;
+}
+.input-form input:focus ~ label,
+.input-form input:valid ~ label {
+  top: 3px;
+  left: 5px;
+  background-color: #f8f8f8;
+  font-size: 1.4rem;
+}
+
+.input-form input:focus,
+.input-form input:valid {
+  background: transparent;
+  border: 1px solid rgb(192, 192, 192);
+}
+
+.login button,
+.createAccount button {
+  width: 90%;
+  margin: 5rem auto 2rem auto;
+  padding: 1.5rem;
+  border-radius: 5rem;
+  border: none;
+  background-color: rgba(3, 196, 3, 0.445);
+  color: white;
+  font-size: 1.6rem;
+}
+.login button:hover,
+.createAccount button:hover {
+  background-color: rgba(3, 196, 3, 0.76);
+  font-weight: 500;
+}
+.forget a {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.footer-signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 1.3rem;
+}
+.footer-signup p {
+  margin: 1rem 0 0.2rem 0;
+}
+.footer-signup img {
+  width: 2rem;
+}
+.input-form input:focus ~ .footer {
+  display: none;
+}

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome 6 (Free) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-p4V8Z5B2gR9+4RtrnF5JrZVw7JXqfpO9imC4DlV2P2pS5f7NPT7bH7N5X8FjIvxjFzL5Z2G0q8nYlgZtG2v9xw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/dashboard.css"/>
+    <title>Opay | Swift Payment</title>
+  </head>
+  <body>
+    <div class="container">
+    <div class="title">
+      <div class="img-container">
+        <img
+          src="/images/Download the OPay Logo in PNG, JPG, SVG, and PDF formats_.png"
+          alt="opay"
+        />
+      </div>
+    </div>
+      <div class="login">
+        <form action="" class="form">
+          <ul>
+            <li class="input-form">
+              <input type="text" name="login-number" class="input" required />
+              <label for="number">Email address or Phone Number</label>
+            </li>
+
+            <li class="input-form">
+              <input
+                type="password"
+                name="login-number"
+                class="passwordInput"
+                placeholder="Enter your password"
+                required
+              />
+            </li>
+          </ul>
+          <p class="wrong"></p>
+          <a href="#"> Forgot Password?</a>
+          <button type="submit" class="btn-login">
+            Log in
+          </button>
+        </form>
+
+
+        <div class="forget">
+          <a href="#">Click to Log in with Face ID</a>
+        </div>
+        <div class="footer-signup">
+          <h8>Don't have an OPay Account yet?</h8>
+          <a href="#" onclick="showCreateAcct()">Click here to get one</a>
+          <div class="cbn">
+            <p>
+              <img src="/images/role-of-cbn-1.webp" />Licensed by the
+              <img
+                src="/images/31-311826_cbn-us-logo-things-happen-to-good-people.png"
+                alt="CBn"
+              />
+              and insured by the
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!---create an account--->
+      <div class="createAccount hidden">
+        <form action="" class="form">
+          <ul>
+            <li class="input-form">
+              <input type="text" name="fullName" class="fullName" required />
+              <label for="number">Full Name</label>
+            </li>
+
+            <li class="input-form">
+              <input
+                type="text"
+                name="login-email"
+                class="emailInput"
+                required
+              />
+              <label for="email">Email Address</label>
+            </li>
+
+            <li class="input-form">
+              <input
+                type="text"
+                name="login-number"
+                class="phoneInput"
+                required
+              />
+              <label for="number">Phone Number</label>
+            </li>
+
+            <li class="input-form">
+              <input
+                type="password"
+                name="login-number"
+                class="createPassword"
+                placeholder="Enter your password"
+                required
+              />
+            </li>
+          </ul>
+          <p class="wrong"></p>
+          <button type="submit" class="btn-create">Create Account</button>
+        </form>
+
+        <div class="footer-signup">
+          <h8>Already have an OPay Account yet?</h8>
+          <a href="#" onclick="showLogin()">Click here to login</a>
+          <div class="cbn">
+            <p>
+              <img src="/images/role-of-cbn-1.webp" />Licensed by the
+              <img
+                src="/images/31-311826_cbn-us-logo-things-happen-to-good-people.png"
+                alt="CBn"
+              />
+              and insured by the
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- dashboard -->
+    <div class="dashboardContainer hidden">
+      <div class="containerdash">
+      <div class="header">
+        <div class="welcome">
+          <p id="welcomeName">Hi <span id="loginBtn"><a href="" onclick="showLogin()">Login</a></span></p>
+        </div>
+        <div class="access">
+          <i class="fa fa-regular fa-headphones"></i>
+          <i class="fa fa-solid fa-qrcode"></i>
+          <i class="fa fa-regular fa-bell"></i>
+        </div>
+      </div>
+      <div class="balance">
+        <ul class="shownAmount">
+          <li><i class="fa fa-shield" aria-hidden="true"></i>Available balance</li>
+          <li class="totalBalance">200,000.00<i class="fa-solid fa-angle-right"></i></li>
+        </ul>
+        <ul class="leftTrans">
+          <li>
+            <a href="">Transaction History<i class="fa-solid fa-angle-right"></i></a>
+          </li>
+          <li class="addMoney">+ Add Money</li>
+        </ul>
+      </div>
+      
+      <div class="combined-trans">
+      <div class="transSection">
+        <div class="transfer-left">
+          <img src="/images/favicon-32x32.png" alt="transaction">
+        </div>
+        <div class="mini-transaction">
+          <ul>
+            <li>Transfer to PAX Christain</li>
+            <li class="date">Aug 24th, 13:33:32</li>
+          </ul>
+        </div>
+        <div class="amount-succes">
+          <ul>
+            <li class="amount">$-1000.00</li>
+            <li class="alert">succesfull</li>
+          </ul>
+        </div>
+      </div>
+
+     
+      <div class="transSection">
+        <div class="transfer-left">
+          <img src="/images/favicon-32x32.png" alt="transaction">
+        </div>
+        <div class="mini-transaction">
+          <ul>
+            <li>Maduorji Chukwudi Princewill</li>
+            <li class="date">Aug 24th, 13:33:32</li>
+          </ul>
+        </div>
+        <div class="amount-succes">
+          <ul>
+            <li class="amount">$35000.00</li>
+            <li class="alert">succesfull</li>
+          </ul>
+        </div>
+      </div>
+       </div>
+      
+      <div class="import-section">
+        <ul class="toOpay">
+          <li><i class="fa fa-solid fa-arrow-up-from-bracket"></i></li>
+          <li>To Opay</li>
+        </ul>
+        <ul class="toBank">
+          <li><i class="fa fa-university" aria-hidden="true"></i></li>
+          <li>To Bank</li>
+        </ul>
+        <ul>
+          <li><i class="fa fa-solid fa-money-bill-transfer"></i></i></li>
+          <li>Withdraw</li>
+        </ul>
+        </div>
+
+        <div class="more-section">
+
+        
+        <div class="other-section">
+        <ul class="toOpay">
+          <li><i class="fa fa-solid fa-mobile"></i></li>
+          <li>Airtime</li>
+        </ul>
+        <ul class="toBank">
+          <li><i class="fa fa-solid fa-wifi"></i></li>
+          <li>Data</li>
+        </ul>
+        <ul>
+          <li><i class="fa fa-solid fa-tv"></i></li>
+          <li>TV</li>
+        </ul>
+        <ul>
+          <li><i class=" fa fa-solid fa-lightbulb"></i></li>
+          <li>Electricity</li>
+        </ul>
+        </div>
+
+        <div class="other-section">
+        <ul class="toOpay">
+          <li><i class="fa fa-solid fa-sack-dollar"></i></li>
+          <li>Refer & Earn</li>
+        </ul>
+        <ul class="toBank">
+          <li><i class="fa fa-solid fa-calendar-check"></i></li>
+          <li>Check-in</li>
+        </ul>
+        <ul>
+          <li><i class="fa fa-solid fa-coins"></i></li>
+          <li>Financial</li>
+        </ul>
+        <ul>
+          <li><i class="fa fa-solid fa-angle-right"></i></li>
+          <li>More</li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-section">
+        <ul class="toOpay">
+          <li><i class="la fa-solid fa-house-chimney"></i></li>
+          <li>Home</li>
+        </ul>
+        <ul class="toBank">
+          <li><i class="la fa-regular fa-gem"></i></li>
+          <li>Rewards</li>
+        </ul>
+        <ul>
+          <li><i class="la fa-solid fa-chart-line"></i></li>
+          <li>finance</li>
+        </ul>
+        <ul>
+          <li><i class="la fa-regular fa-credit-card"></i></li>
+          <li>Cards</li>
+        </ul>
+        <ul>
+          <li><i class="la fa-regular fa-user"></i></li>
+          <li>Me</li>
+        </ul>
+        </div>
+    </div>
+  </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
