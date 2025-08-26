@@ -3,6 +3,7 @@ ul{
     margin: 0;
     padding: 0;
     list-style: none;
+    cursor: pointer;
 }
 span a{
     color: green;
@@ -14,6 +15,7 @@ span a{
 a{
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
 .containerdash{
     font-size: 1.5rem;
