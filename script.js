@@ -34,11 +34,14 @@ const footer = document.querySelectorAll(".footer-signup");
 //sections
 const login = document.querySelector(".login");
 const createAccount = document.querySelector(".createAccount");
-
+//dashboard
 const welcomeMessage = document.getElementById("welcomeName");
 const dashboard = document.querySelector(".dashboardContainer");
 const totalBalance = document.querySelector(".totalBalance");
 const containerTransact = document.querySelector(".transSection");
+//transaction page
+const transactionPage = document.querySelector(".transaction-page");
+const transLink = document.querySelector(".transLink");
 
 let currentAccount;
 
@@ -105,6 +108,8 @@ loginBtn.addEventListener("click", function (e) {
   }
 });
 
+transLink.addEventListener("click", showTransaction);
+
 const userFirst = (user) => user.fullName.split("");
 console.log(userFirst(user1));
 
@@ -125,17 +130,22 @@ const showDashboard = function () {
   userDashboard(currentAccount);
 };
 
+function showTransaction(a) {
+  a.preventDefault();
+  dashboard.classList.add("hidden");
+}
+
 function userDashboard(user) {
   welcomeMessage.textContent = `HI, ${user.fullName
     .split(" ")[0]
     .toUpperCase()}`;
 
-    containerTransact.innerHTML = "";
-    const combinedTrans = user.transaction.map((trans, i) => {
-      transaction: trans
-    })
+  containerTransact.innerHTML = "";
+  const combinedTrans = user.transaction.map((trans, i) => {
+    transaction: trans;
+  });
   combinedTrans.forEach((user) => {
-    const [trans] = user
+    const [trans] = user;
     const type = user.transaction > 0 ? "credit" : "debit";
     let html = `<div class="combined-trans">
     <div class="transSection">
@@ -155,6 +165,6 @@ function userDashboard(user) {
             </ul>
         </div>
       </div>`;
-      containerTransact.insertAdjacentHTML('afterbegin', html)
+    containerTransact.insertAdjacentHTML("afterbegin", html);
   });
 }
