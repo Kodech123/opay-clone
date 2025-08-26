@@ -137,3 +137,54 @@ body .hidden {
 .input-form input:focus ~ .footer {
   display: none;
 }
+
+.transaction-page {
+  padding: 0 2rem;
+}
+.transHeader {
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 0 1.5rem;
+}
+.transCat {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-self: center;
+  margin: 1.5rem;
+  gap: 2rem;
+
+}
+.transCat li {
+  background-color: #d4d4d459;
+  padding: 1rem 1.4rem;
+  width: 150px;
+  border-radius: 2.5rem;
+}
+.monthTrans {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.analysis {
+  float: right;
+  padding: 0.5rem 1.6rem;
+  color: white;
+  background-color: green;
+  display: block;
+  border-radius: 3.2rem;
+}
+.inAndOut{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 20rem;
+  padding: 0 1.2rem;
+  font-size: 1.4rem;
+  color: #777777;
+}
+.inAndOut .amount{
+  font-weight: 600;
+  color: black;
+}
