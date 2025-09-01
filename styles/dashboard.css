@@ -1,172 +1,183 @@
-
-ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    cursor: pointer;
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  cursor: pointer;
 }
-span a{
-    color: green;
+span a {
+  color: green;
 }
-.dashboardContainer{
-    margin: 0 1.6rem;
-   
+.dashboardContainer {
+  margin: 0 1.6rem;
 }
-a{
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
 }
-.containerdash{
-    font-size: 1.5rem;
-    
+.containerdash {
+  font-size: 1.5rem;
 }
-.containerdash a{
-    text-decoration: none;
-    cursor: pointer;
+.containerdash a {
+  text-decoration: none;
+  cursor: pointer;
 }
-.containerdash li, .containerdash ul{
-    list-style: none;
-    margin: 0;
+.containerdash li,
+.containerdash ul {
+  list-style: none;
+  margin: 0;
 }
-.dashboardContainer .header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.dashboardContainer .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-.dashboardContainer .header .access .fa{
-    font-size: 2rem;
-    margin-right: .8rem;
+.dashboardContainer .header .access .fa {
+  font-size: 2rem;
+  margin-right: 0.8rem;
 }
-#loginBtn{
-    color: green;
-    border:.1rem solid green;
-    padding: .7rem 1.6rem;
-    margin-left: .5rem;
-    border-radius: 1.6rem;
+#loginBtn {
+  color: green;
+  border: 0.1rem solid green;
+  padding: 0.7rem 1.6rem;
+  margin-left: 0.5rem;
+  border-radius: 1.6rem;
 }
-.balance{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: .8rem 1.6rem;
-    margin-top: 1.6rem;
-    color: white;
-    background-color: rgba(39, 165, 39, 0.836);
-    border-radius: 2rem;
+.balance {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.6rem;
+  margin-top: 1.6rem;
+  color: white;
+  background-color: rgba(39, 165, 39, 0.836);
+  border-radius: 2rem;
 }
-.balance li{
-    margin: 1rem 0rem;
+.balance li {
+  margin: 1rem 0rem;
 }
-.addMoney{
-    float: right;
-    padding: .5rem 1.6rem;
-    color: green;
-    background-color: white;
-    display: block;
-    border-radius: 3.2rem;
+.addMoney {
+  float: right;
+  padding: 0.5rem 1.6rem;
+  color: green;
+  background-color: white;
+  display: block;
+  border-radius: 3.2rem;
 }
-.totalBalance{
-    padding: .5rem;
-    font-size: 2.1rem;
-    display: inline;
-    float: left;
+.totalBalance {
+  padding: 0.5rem;
+  font-size: 2.1rem;
+  display: inline;
+  float: left;
 }
-.import-section{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin: 1.2rem 0;
-    background-color: white;
-    padding: .8rem 0rem;
-    border-radius: 1.6rem;
-    
+.import-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1.2rem 0;
+  background-color: white;
+  padding: 0.8rem 0rem;
+  border-radius: 1.6rem;
 }
 .import-section ul,
 .other-section ul,
-.footer-section ul{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.footer-section ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .import-section .fa,
-.other-section .fa{
-    background-color: rgba(91, 187, 91, 0.397);
-    padding: .8rem;
-    border-radius: 1.3rem;
-    font-size: 1rem;
-    color: green;
-    margin: .5rem;
-    width: 80%;
-}   
-
-.more-section{
-    background-color: white;
-    border-radius: 2.1rem;
+.other-section .fa {
+  background-color: rgba(91, 187, 91, 0.397);
+  padding: 0.8rem;
+  border-radius: 1.3rem;
+  font-size: 1.9rem;
+  color: green;
+  margin: 0.5rem;
+  width: 80%;
 }
 
-.other-section{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 1rem 0rem;
+.more-section {
+  background-color: white;
+  border-radius: 2.1rem;
 }
-.footer-section .la{
-    color: rgb(90, 90, 90);
+
+.other-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem 0rem;
+}
+.footer-section .la {
+  color: rgb(90, 90, 90);
 }
 .footer-section ul:hover,
-.footer-section ul:hover i{
-    color: green;
+.footer-section ul:hover i {
+  color: green;
 }
-.footer-section{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: .8rem 0rem;
-    position: absolute;
-    bottom: 0;
-    font-size: 1.6rem;
-    left: 0;
-    width: 100%;
-    background-color: white;
-} 
-.combined-trans{
-    background-color: white;
-    border-radius: 1.3rem;
-    margin: 1.6rem 0;
-    padding: .6rem;
+.footer-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.8rem 0rem;
+  position: absolute;
+  bottom: 0;
+  font-size: 1.6rem;
+  left: 0;
+  width: 100%;
+  background-color: white;
 }
-.transSection{
-    display: grid;
-    grid-template-columns: 5rem 2fr 1fr;
-    margin-top: 1rem;
-    width: 100%,
+.combined-trans {
+  background-color: white;
+  border-radius: 1.3rem;
+  margin: 1.6rem 0;
+  padding: 0.6rem;
 }
-.transSection .mini-transaction li{
-    font-size: 1.5rem;
+.transSection {
+  display: grid;
+  grid-template-columns: 5rem 2fr 1fr;
+  margin-top: 1rem;
+  width: 100%;
 }
-.transSection .mini-transaction .date{
-    color: #aaa;
-    font-size: 1.3rem;
-    padding-top: 1rem;
+.transSection .mini-transaction li {
+  font-size: 1.5rem;
 }
-.transSection .amount-succes .alert{
-    color: green;
-    text-align: center;
-    margin: 0 auto;
-    background-color: #c0c0c079;
-    margin-top: .5rem;
-    font-size: 1rem;
-    border-radius: 8rem;
-    padding: .3rem;
-    width: 60%;
+.transSection .mini-transaction .date {
+  color: #aaa;
+  font-size: 1.3rem;
+  padding-top: 1rem;
 }
-.transSection .amount-succes ul .amount{
-    font-size: 1.7rem;
-    text-align: center;
-    font-weight: 600;
+.transSection .amount-succes .alert {
+  color: green;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #c0c0c079;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  border-radius: 8rem;
+  padding: 0.3rem;
+  width: 60%;
+}
+.transSection .amount-succes ul .amount {
+  font-size: 1.7rem;
+  text-align: center;
+  font-weight: 600;
+}
+.transSection .transfer-left .fa {
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: .3rem;
+}
+.transfer-left {
+  background-color: rgba(113, 211, 113, 0.247);
+  padding: 0.8rem;
+  border-radius: 50%;
+  font-size: 1.9rem;
+  color: rgb(8, 202, 8);
+  margin: 0.5rem;
+  text-align: center;
 }

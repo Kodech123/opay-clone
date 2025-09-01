@@ -113,7 +113,8 @@ transLink.addEventListener("click", showTransaction);
 const userFirst = (user) => user.fullName.split("");
 console.log(userFirst(user1));
 
-const showLogin = function () {
+const showLogin = function (e) {
+  e.preventDefault();
   login.classList.remove("hidden");
   createAccount.classList.add("hidden");
   dashboard.classList.add("hidden");
@@ -133,38 +134,12 @@ const showDashboard = function () {
 function showTransaction(a) {
   a.preventDefault();
   dashboard.classList.add("hidden");
+  transactionPage.classList.remove("hidden")
+
 }
 
 function userDashboard(user) {
   welcomeMessage.textContent = `HI, ${user.fullName
     .split(" ")[0]
     .toUpperCase()}`;
-
-  containerTransact.innerHTML = "";
-  const combinedTrans = user.transaction.map((trans, i) => {
-    transaction: trans;
-  });
-  combinedTrans.forEach((user) => {
-    const [trans] = user;
-    const type = user.transaction > 0 ? "credit" : "debit";
-    let html = `<div class="combined-trans">
-    <div class="transSection">
-    <div class="transfer-left">
-    <img src="/images/favicon-32x32.png" alt="transaction">
-    </div>
-    <div class="mini-transaction">
-    <ul>
-    <li>Transfer to PAX Christain</li>
-            <li class="date">Aug 24th, 13:33:32</li>
-            </ul>
-            </div>
-            <div class="amount-succes">
-          <ul>
-          <li class="amount">${trans}</li>
-            <li class="alert">${type}</li>
-            </ul>
-        </div>
-      </div>`;
-    containerTransact.insertAdjacentHTML("afterbegin", html);
-  });
-}
+  }
