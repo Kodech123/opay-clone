@@ -39,7 +39,8 @@ const welcomeMessage = document.getElementById("welcomeName");
 const dashboard = document.querySelector(".dashboardContainer");
 const totalBalance = document.querySelector(".totalBalance");
 const containerTransact = document.querySelector(".transSection");
-//transaction page
+//transaction 
+const transGoBack = document.querySelector(".transGoBack");
 const transactionPage = document.querySelector(".transaction-page");
 const transLink = document.querySelector(".transLink");
 
@@ -109,6 +110,12 @@ loginBtn.addEventListener("click", function (e) {
 });
 
 transLink.addEventListener("click", showTransaction);
+
+transGoBack.addEventListener("click", function(){
+  transactionPage.classList.add("hidden");
+  dashboard.classList.remove("hidden");
+})
+
 
 const userFirst = (user) => user.fullName.split("");
 console.log(userFirst(user1));

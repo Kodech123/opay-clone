@@ -137,6 +137,10 @@ a {
   margin: 1.6rem 0;
   padding: 0.6rem;
 }
+
+.transGoBack{
+    text-align: left
+}
 .transSection {
   display: grid;
   grid-template-columns: 5rem 2fr 1fr;
