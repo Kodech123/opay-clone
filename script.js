@@ -3,7 +3,8 @@ const user1 = {
   fullName: "Chukwudi Felix",
   phoneNumber: "09042404722",
   email: "felixchukwudi126@gmail.com",
-  transaction: [200, 400, -20, 5000, 100],
+  users: ["Chika Okere","Ndubisi Madu","Chima Obim","Chika Okere","Ahmed Justice","Happiness Felix"],
+  transaction: [200, 400, -20, 5000, 100, 500],
   passWord: "kudi2003",
 };
 
@@ -12,6 +13,7 @@ const user2 = {
   phoneNumber: "08052388240",
   transaction: [200, 400, -20, 5000, -100],
   passWord: "chibaby",
+  users: ["Ameka", "Obi", "Ikenna", "Chika", "Ngozi"]
 };
 
 let account = [user1, user2];
@@ -38,8 +40,8 @@ const createAccount = document.querySelector(".createAccount");
 const welcomeMessage = document.getElementById("welcomeName");
 const dashboard = document.querySelector(".dashboardContainer");
 const totalBalance = document.querySelector(".totalBalance");
-const containerTransact = document.querySelector(".transSection");
-//transaction 
+//transaction
+const containerTransact = document.querySelector(".transSumary");
 const transGoBack = document.querySelector(".transGoBack");
 const transactionPage = document.querySelector(".transaction-page");
 const transLink = document.querySelector(".transLink");
@@ -111,11 +113,10 @@ loginBtn.addEventListener("click", function (e) {
 
 transLink.addEventListener("click", showTransaction);
 
-transGoBack.addEventListener("click", function(){
+transGoBack.addEventListener("click", function () {
   transactionPage.classList.add("hidden");
   dashboard.classList.remove("hidden");
-})
-
+});
 
 const userFirst = (user) => user.fullName.split("");
 console.log(userFirst(user1));
@@ -141,12 +142,44 @@ const showDashboard = function () {
 function showTransaction(a) {
   a.preventDefault();
   dashboard.classList.add("hidden");
-  transactionPage.classList.remove("hidden")
-
+  transactionPage.classList.remove("hidden");
 }
 
 function userDashboard(user) {
   welcomeMessage.textContent = `HI, ${user.fullName
     .split(" ")[0]
     .toUpperCase()}`;
-  }
+}
+
+//Implementing the Transaction Features
+const displayTrans = function (user) {
+  
+  user.users.forEach(function (name, i) {
+
+    const amount = user.transaction[i];
+    const check = amount > 0 ? "deposit" : "withdrawer";
+    const symbol =
+      amount > 0
+        ? '<i class="fa-solid fa-arrow-down fa"></i>'
+        : '<i class="fa-solid fa-arrow-up-from-bracket"></i>';
+
+    const heyHtml = `<div class="transSection"><div class="transfer-left  transfer-${check}">
+         ${symbol}
+        </div>
+        <div class="mini-transaction">
+          <ul>
+            <li>${name}</li>
+            <li class="date">Aug 24th, 13:33:32</li>
+          </ul>
+        </div>
+        <div class="amount-succes transfer-${check}">
+          <ul>
+            <li class="amount">$${amount}.00</li>
+            <li class="alert">succesfull</li>
+          </ul>
+        </div>
+        </div>`;
+    containerTransact.insertAdjacentHTML("beforeend", heyHtml);
+  });
+};
+displayTrans(user1);

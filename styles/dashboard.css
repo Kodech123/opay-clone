@@ -185,3 +185,7 @@ a {
   margin: 0.5rem;
   text-align: center;
 }
+.transfer-withdrawer ul .amount{
+    width: 100%;
+    color: green;
+}
